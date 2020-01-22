@@ -479,7 +479,7 @@ angular.module("api-tools-ui/header/header.html", []).run(["$templateCache", fun
     "\n" +
     "    <a class=\"logo\" ui-sref=\"ag\"\n" +
     "      ng-click=\"vm.setSelected('')\"><img id=\"logo\"\n" +
-    "      src=\"api-tools-ui/img/logo.png\" alt=\"ApiTools\"></a>\n" +
+    "      src=\"api-tools-ui/img/logo.png\" alt=\"Laminas API Tools\"></a>\n" +
     "\n" +
     "    <button type=\"button\" class=\"btn btn-info sidebar-toggle\"\n" +
     "      data-toggle=\"sidebar\">\n" +
@@ -2331,6 +2331,12 @@ angular.module("api-tools-ui/rest/rest.html", []).run(["$templateCache", functio
     "                    <tabset justified=\"true\" class=\"col-sm-12\">\n" +
     "                      <tab ng-repeat=\"http in vm.rest.collection_http_methods\" heading=\"{{http}}\">\n" +
     "                        <div class=\"form-group\">\n" +
+    "                          <label class=\"col-sm-2 control-label\">Identifier</label>\n" +
+    "                          <div class=\"col-sm-10\">\n" +
+    "                            <textarea class=\"form-control\" ng-model=\"vm.rest.documentation.collection[http].identifier\" placeholder=\"Insert the identifier here\" ng-disabled=\"vm.disabled\"></textarea>\n" +
+    "                          </div>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"form-group\">\n" +
     "                          <label class=\"col-sm-2 control-label\">Description</label>\n" +
     "                          <div class=\"col-sm-10\">\n" +
     "                            <textarea class=\"form-control\" ng-model=\"vm.rest.documentation.collection[http].description\" placeholder=\"Insert the description here\" ng-disabled=\"vm.disabled\"></textarea>\n" +
@@ -2368,6 +2374,12 @@ angular.module("api-tools-ui/rest/rest.html", []).run(["$templateCache", functio
     "                  <div class=\"form-group\">\n" +
     "                    <tabset justified=\"true\" class=\"col-sm-12\">\n" +
     "                      <tab ng-repeat=\"http in vm.rest.entity_http_methods\" heading=\"{{http}}\">\n" +
+    "                        <div class=\"form-group\">\n" +
+    "                          <label class=\"col-sm-2 control-label\">Identifier</label>\n" +
+    "                          <div class=\"col-sm-10\">\n" +
+    "                            <textarea class=\"form-control\" ng-model=\"vm.rest.documentation.entity[http].identifier\" placeholder=\"Insert the identifier here\" ng-disabled=\"vm.disabled\"></textarea>\n" +
+    "                          </div>\n" +
+    "                        </div>\n" +
     "                        <div class=\"form-group\">\n" +
     "                          <label class=\"col-sm-2 control-label\">Description</label>\n" +
     "                          <div class=\"col-sm-10\">\n" +
@@ -2598,6 +2610,12 @@ angular.module("api-tools-ui/rpc/rpc.html", []).run(["$templateCache", function(
     "          <div class=\"form-group\">\n" +
     "            <tabset justified=\"true\" class=\"col-sm-12\">\n" +
     "              <tab ng-repeat=\"http in vm.rpc.http_methods\" heading=\"{{http}}\">\n" +
+    "                <div class=\"form-group\">\n" +
+    "                  <label class=\"col-sm-2 control-label\">Identifier</label>\n" +
+    "                  <div class=\"col-sm-10\">\n" +
+    "                    <textarea class=\"form-control\" ng-model=\"vm.rpc.documentation[http].identifier\" placeholder=\"Insert the identifier here\" ng-disabled=\"vm.disabled\"></textarea>\n" +
+    "                  </div>\n" +
+    "                </div>\n" +
     "                <div class=\"form-group\">\n" +
     "                  <label class=\"col-sm-2 control-label\">Description</label>\n" +
     "                  <div class=\"col-sm-10\">\n" +
